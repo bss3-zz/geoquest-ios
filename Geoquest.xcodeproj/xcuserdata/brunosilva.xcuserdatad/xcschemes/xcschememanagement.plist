@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Geoquest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>7E3C6D661D03A10A00AF3865</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E3C6D7D1D03A10B00AF3865</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E3C6D881D03A10B00AF3865</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
