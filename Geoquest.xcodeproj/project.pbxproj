@@ -15,6 +15,9 @@
 		7E3C6D781D03A10A00AF3865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3C6D761D03A10A00AF3865 /* LaunchScreen.storyboard */; };
 		7E3C6D831D03A10B00AF3865 /* GeoquestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C6D821D03A10B00AF3865 /* GeoquestTests.swift */; };
 		7E3C6D8E1D03A10B00AF3865 /* GeoquestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C6D8D1D03A10B00AF3865 /* GeoquestUITests.swift */; };
+		7E3C6D9F1D03B88400AF3865 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E3C6D9C1D03B88300AF3865 /* FBSDKCoreKit.framework */; };
+		7E3C6DA01D03B88400AF3865 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E3C6D9D1D03B88400AF3865 /* FBSDKLoginKit.framework */; };
+		7E3C6DA11D03B88400AF3865 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E3C6D9E1D03B88400AF3865 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,10 @@
 		7E3C6D891D03A10B00AF3865 /* GeoquestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoquestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E3C6D8D1D03A10B00AF3865 /* GeoquestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoquestUITests.swift; sourceTree = "<group>"; };
 		7E3C6D8F1D03A10B00AF3865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E3C6D9C1D03B88300AF3865 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		7E3C6D9D1D03B88400AF3865 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		7E3C6D9E1D03B88400AF3865 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		7E3C6DA31D03BE5300AF3865 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E3C6DA01D03B88400AF3865 /* FBSDKLoginKit.framework in Frameworks */,
+				7E3C6D9F1D03B88400AF3865 /* FBSDKCoreKit.framework in Frameworks */,
+				7E3C6DA11D03B88400AF3865 /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +109,7 @@
 		7E3C6D691D03A10A00AF3865 /* Geoquest */ = {
 			isa = PBXGroup;
 			children = (
+				7E3C6D9B1D03B86A00AF3865 /* frameworks */,
 				7E3C6D6A1D03A10A00AF3865 /* AppDelegate.swift */,
 				7E3C6D6C1D03A10A00AF3865 /* ViewController.swift */,
 				7E3C6D6E1D03A10A00AF3865 /* Main.storyboard */,
@@ -106,6 +117,7 @@
 				7E3C6D761D03A10A00AF3865 /* LaunchScreen.storyboard */,
 				7E3C6D791D03A10A00AF3865 /* Info.plist */,
 				7E3C6D711D03A10A00AF3865 /* Geoquest.xcdatamodeld */,
+				7E3C6DA31D03BE5300AF3865 /* Bridging-Header.h */,
 			);
 			path = Geoquest;
 			sourceTree = "<group>";
@@ -126,6 +138,16 @@
 				7E3C6D8F1D03A10B00AF3865 /* Info.plist */,
 			);
 			path = GeoquestUITests;
+			sourceTree = "<group>";
+		};
+		7E3C6D9B1D03B86A00AF3865 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E3C6D9C1D03B88300AF3865 /* FBSDKCoreKit.framework */,
+				7E3C6D9D1D03B88400AF3865 /* FBSDKLoginKit.framework */,
+				7E3C6D9E1D03B88400AF3865 /* FBSDKShareKit.framework */,
+			);
+			name = frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +218,7 @@
 				TargetAttributes = {
 					7E3C6D661D03A10A00AF3865 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = RU86HQ668P;
 					};
 					7E3C6D7D1D03A10B00AF3865 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -405,7 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Geoquest",
+				);
 				INFOPLIST_FILE = Geoquest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.pet.Geoquest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,7 +445,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Geoquest",
+				);
 				INFOPLIST_FILE = Geoquest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.pet.Geoquest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
